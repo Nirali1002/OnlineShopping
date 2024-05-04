@@ -1,0 +1,142 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+    background-color: #a0b2ff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 90px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#page-header{
+    background-image: url("loginpageimg1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.login-header{
+    line-height: 1px;
+}
+
+#page-header h2,
+#page-header p{
+    color: white;
+}
+
+form{
+    padding-top: 20px;
+}
+
+form input{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+    resize: none;
+    height: 90px;
+}
+
+form h2{
+    font-size: 30px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+form span{
+    font-size: 17px;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer p{
+    font-size: 15px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .col a{
+    font-size: 17px;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    padding-right: 4px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+form button{
+    background-color: #088178;
+    color: #fff;
+    margin-left: 1px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 120px;
+    border-radius: 7px;
+}
+
+
+.section-p1{
+    padding: 40px 80px;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="weblogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        function validForm()
+        {
+            var u_name = document.getElementById("UserName").value;
+            var login_id = document.getElementById("LoginId").value;
+            var email = document.getElementById("Email").value;
+            var password = document.getElementById("Password").value;
+            var phonenumber = document.getElementById("MobileNumber").value;
+
+            var usernameRegex = /^[A-Za-z0-9@]{1,20}$/;
+            var IDRegex = /^[A-Za-z\d*]{1,10}$/;
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-\]+\.[a-zA-Z]{2,}$/;
+            var passwordRegex = /^([a-zA-Z]|\d|[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]){6,}$/;
+            var phonenumberRegex = /^\d{10}$/;
+
+            var isValid = true;
+            var message = "";
+
+            if (!usernameRegex.test(u_name)) {
+                isValid = false;
+                message += "Username is incorrect.\n";
+            }
+
+            if (!IDRegex.test(login_id)) {
+                isValid = false;
+                message += "Login Id is incorrect.\n";
+            }
+
+            if (!emailRegex.test(email)) {
+                isValid = false;
+                message += "Email is incorrect.\n";
+            }
+
+            if (!passwordRegex.test(password)) {
+                isValid = false;
+                message += "Password is incorrect.\n";
+            }
+
+            if (!phonenumberRegex.test(phonenumber)) {
+                isValid = false;
+                message += "Mobile number is incorrect.\n";
+            }
+
+            var loginStatus = document.getElementById("loginStatus");
+            if (isValid) {
+                loginStatus.value = "Login Successful!";
+            } else {
+                loginStatus.value = "Check inputs:\n" + message;
+            }
+
+            return isValid;
+        }
+    </script>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="newlogo.png" class="logo" alt=""></a>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="WebAssignment.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+    </section>
+
+    <section id="page-header" class="login-header">
+        <h2>#login</h2>
+        <p>Login to the website and enjoy shopping!</p>
+    </section>
+
+    <form>
+        <input type="text" id="UserName" placeholder="UserName" class="Class"> <br>
+        <input type="text" id="LoginId" placeholder="Login Id" class="Class"> <br>
+        <input type="email" id="Email" placeholder="Email" class="Class"> <br>
+        <input type="password" id="Password" placeholder="Password" class="Class"> <br>
+        <input type="number" id="MobileNumber" placeholder="Mobile Number" class="Class"> <br>
+        <input type="text" placeholder="Gender"><br>
+        <textarea placeholder="Enter Comments"></textarea>
+        <button id="button" onclick="return validForm()">Submit</button> <br>
+        <p>Check login status and try again if require!</p>
+        <h4> Login Status </h4>
+        <textarea id="loginStatus" rows="4" cols="50"></textarea>
+    </form>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="newlogo.png" alt="" style="vertical-align: middle;"> <br>
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 12/2, S.G highway, Ahmedabad </p>
+            <p><strong>Phone: </strong>+911234567890 / +912143658709</p>
+            <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4> Follow us </h4>
+                <div class="icon">
+                    <a href="http://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="http://twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="http://youtube.com" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+                    <a href="http://pinterest.com" target="_blank"><i class="fa-brands fa-square-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4 style="font-size: 21px;">About</h4> <br>
+            <a href="about.html">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4 style="font-size: 21px;">My Account</h4> <br>
+            <a href="#">Account</a>
+            <a href="weblogin.html">Loging In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4 style="font-size: 21px;">Install App</h4> <br>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <a href="http://playstore.com" target="blank">
+                <img src="playstore1.png" alt="" style="height: 90px; width: 190px; padding-bottom: 20px; padding-top: 15px;"> </a>
+                <a href="http://appstore.com" target="blank">
+                <img src="appstore1.png" alt="" style="height: 70px; width: 190px; padding-bottom: 20px;"> </a>
+            </div>
+            <p>Secured Payment Gateways </p>
+            <img src="pay.png">
+        </div>
+
+        <div class="copyright">
+            <p>© 2024, Tech ect - HTML CSS Ecommerce Website</p>
+        </div>
+    </footer>
+</body>
+</html>
